@@ -5,6 +5,8 @@
  */
 package br.com.Marrone.model;
 
+import java.util.List;
+
 /**
  *
  * @author Gui Freitas
@@ -84,6 +86,5 @@ public class Cliente {
     public void setStatus(boolean status) {
         this.status = status;
     }
-    
 
 }
