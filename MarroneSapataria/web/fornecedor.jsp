@@ -1,10 +1,12 @@
 <%-- 
-    Document   : index
-    Created on : 24/09/2017, 18:12:06
+    Document   : fornecedor
+    Created on : 24/09/2017, 19:17:08
     Author     : Guilherme Freitas
 --%>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%> 
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -15,7 +17,7 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
     <body>
 
@@ -31,7 +33,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="index.jsp">Home</a></li>
                         <li><a href="cliente.jsp">Cliente</a></li>
                         <li><a href="fornecedor.jsp">Fronecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
@@ -46,13 +48,13 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-                   
-                </div>
-                
-                <div class="col-sm-8 text-left"> 
 
                 </div>
-                
+
+                <div class="col-sm-8 text-left"> 
+                    Fornecedor
+                </div>
+
                 <div class="col-sm-2 sidenav">
 
                 </div>
