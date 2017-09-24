@@ -134,6 +134,7 @@ public class ClienteDao {
             }
 
         } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, erro);
         }
         return cliente;
     }
@@ -159,6 +160,7 @@ public class ClienteDao {
             }
 
         } catch (SQLException erro) {
+            JOptionPane.showMessageDialog(null, erro);
         }
         return cliente;
     }

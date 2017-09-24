@@ -89,8 +89,7 @@ public class ValidadoresCTRL {
             return false;
         }
     }
-
-   
+    
     public static boolean ValidaCnpj(String cnpj) throws Exception { 
         boolean retorno = ValidarCNPJ.ValidaCnpj(cnpj);
         return retorno;
