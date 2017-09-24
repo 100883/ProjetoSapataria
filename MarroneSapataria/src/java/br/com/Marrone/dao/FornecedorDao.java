@@ -109,7 +109,7 @@ public class FornecedorDao {
 
             if (nome != null) {
                 if (!nome.isEmpty()) {
-                    sql += " and nome like ? ";
+                    sql += " and razaosocial_forn like ? ";
                 }
             }
 

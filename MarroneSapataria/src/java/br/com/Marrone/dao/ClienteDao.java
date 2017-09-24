@@ -104,7 +104,7 @@ public class ClienteDao {
 
             if (nome != null) {
                 if (!nome.isEmpty()) {
-                    sql += " and nome like ? ";
+                    sql += " and nome_cli like ? ";
                 }
             }
 
