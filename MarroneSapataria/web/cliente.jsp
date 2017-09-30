@@ -52,7 +52,7 @@
                 </div>
 
                 <div class="col-sm-8 text-left"> 
-                    <form method="post" action="UsuarioCtr" name="frmAdicionaUsuario">
+                    <form method="post" action="ClienteCTRL" name="frmAdicionaCliente">
                         <input type="submit" value="Salvar" class="btn">
                         <input type="reset" value="Limpar" class="btn">
                         <br><br>

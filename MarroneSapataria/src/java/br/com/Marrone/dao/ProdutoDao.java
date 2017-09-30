@@ -52,7 +52,7 @@ public class ProdutoDao {
         }
     }
 
-    public void Excluir(int id) {
+    public void Excluir(int id) throws Exception{
         try {
             String sql = "DELETE FROM produto WHERE id_prod = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);

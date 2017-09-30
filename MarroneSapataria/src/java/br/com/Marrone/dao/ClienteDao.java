@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -98,26 +99,29 @@ public class ClienteDao {
     public List<Cliente> Listar(String nome) {
         List<Cliente> cliente = new ArrayList<Cliente>();
         try {
+//            String sql = "SELECT * "
+//                    + "FROM cliente "
+//                    + "WHERE 1=1 ";
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    sql += " and nome_cli like ? ";
+//                }
+//            }
+//
+//            sql += "ORDER BY nome_cli";
+//
+//            PreparedStatement prd = conexao.prepareStatement(sql);
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    prd.setString(1, "%" + nome + "%");
+//                }
+//            }
             String sql = "SELECT * "
                     + "FROM cliente "
                     + "WHERE 1=1 ";
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    sql += " and nome_cli like ? ";
-                }
-            }
-
-            sql += "ORDER BY nome_cli";
-
-            PreparedStatement prd = conexao.prepareStatement(sql);
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    prd.setString(1, "%" + nome + "%");
-                }
-            }
-
+            Statement prd = conexao.createStatement();
             ResultSet rs = prd.executeQuery(sql);
 
             while (rs.next()) {
@@ -139,8 +143,8 @@ public class ClienteDao {
         return cliente;
     }
 
-    public List<Cliente> ListarPorId(int id) {
-        List<Cliente> cliente = new ArrayList<Cliente>();
+    public Cliente ListarPorId(int id) {
+        Cliente cliente = new Cliente();
         try {
             String sql = "SELECT * FROM cliente WHERE id_cli = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);

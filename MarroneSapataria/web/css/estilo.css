@@ -26,3 +26,27 @@ footer {
     }
     .row.content {height:auto;} 
 }
+
+table{
+    width: 850px;
+    background-color: #333;
+    font-family: Arial;
+    font-size: 100%;
+    color: #fff;
+}
+
+
+.btn{
+    width: 100px;
+    height: 30px;
+    border: 1px solid #ddd;
+    background-color: #452;
+}
+
+.campo{
+    width: 300px;
+    height: 30px;
+    border: 1px solid #ddd;
+    margin-top: 5px;
+    margin-bottom: 10px;
+}
