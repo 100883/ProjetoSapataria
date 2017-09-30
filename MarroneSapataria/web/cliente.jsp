@@ -37,6 +37,7 @@
                         <li><a href="clienteWeb.jsp">Cliente</a></li>
                         <li><a href="fornecedor.jsp">Fronecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
+                        <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -59,22 +60,22 @@
 
                         Id<br>
                         <input type="text" readonly="readonly" name="id" class="id"
-                               value="<c:out value="${usuario.id}"/>"/><br><br>                    
+                               value="<c:out value="${cli.id}"/>"/><br><br>                    
                         Nome<br>
                         <input type="text" name="nome" class="campo" maxlength="100" required autofocus 
-                               value = "<c:out value="${usuario.nome}"/>"/><br>
+                               value = "<c:out value="${cli.nome}"/>"/><br>
                         CPF<br>
                         <input type="text" name="cpf" class="campo" maxlength="11" required
-                               value = "<c:out value="${usuario.cpf}"/>"/><br>
+                               value = "<c:out value="${cli.cpf}"/>"/><br>
                         Endereço<br>
                         <input type="text" name="endereco" class="campo" maxlength="200" required
-                               value = "<c:out value="${usuario.endereco}"/>"/><br>
+                               value = "<c:out value="${cli.endereco}"/>"/><br>
                         Email<br>
                         <input type="email" name="email" class="campo" maxlength="50" required
-                               value = "<c:out value="${usuario.email}"/>"/><br>
+                               value = "<c:out value="${cli.email}"/>"/><br>
                         Celular<br>
                         <input type="text" name="celular" class="campo" maxlength="16" required
-                               value = "<c:out value="${usuario.celular}"/>"/><br>
+                               value = "<c:out value="${cli.celular}"/>"/><br>
                         Sexo<br>
                         <input type="radio" name="sexo" required
                                value= "M"/> Masculino
@@ -89,7 +90,7 @@
 
                         Data Cadastro<br>
                         <input type="text"  name="dataCad" class="campo" required
-                               value = "<c:out value="${usuario.dataCad}"/>" /> <br />
+                               value = "<c:out value="${cli.dataCad}"/>" /> <br />
 
                 </div>
 

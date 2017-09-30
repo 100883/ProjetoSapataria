@@ -19,8 +19,7 @@
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
     </head>
-    <body>
-
+    <body>        
     <nav class="navbar navbar-inverse">
         <div class="container-fluid">
             <div class="navbar-header">
@@ -47,7 +46,13 @@
 
     <div class="container-fluid text-center">    
         <div class="row content">
-            <div class="col-sm-2 sidenav">
+            <div class="col-sm-2 sidenav">                
+                <li><a href="listaCliente.jsp">Clientes</a></li>
+                <li><a href="#">Fornecedores</a></li>
+                <li><a href="#">Produtos</a></li>
+            </div>
+
+            <div class="col-sm-8 text-left"> 
                 <h1>Consulta de Clientes</h1>
                 <hr><br><br>
                 <table border=1>
@@ -65,7 +70,7 @@
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${clinetes}" var="cli">
+                        <c:forEach items="${clientes}" var="cli">
                             <tr>
                                 <td><c:out value="${cli.id}" /></td>
                                 <td><c:out value="${cli.nome}" /></td>
@@ -74,7 +79,6 @@
                                 <td><c:out value="${cli.celular}" /></td>
                                 <td><c:out value="${cli.sexo}" /></td>
                                 <td><c:out value="${cli.status}" /></td>
-                                <td><c:out value="${cli.dataCad}" /></td>
 
                                 <td><a href="ClienteCTRL?action=alterar&id=<c:out value="${cli.id}"/>">Alterar</a></td>
                                 <td><a href="ClienteCTRL?action=deletar&id=<c:out value="${cli.id}"/>">Deletar</a></td>
@@ -83,10 +87,6 @@
                     </tbody>
                 </table>
                 <p><a href="ClienteCTRL?action=adicionar">Adicionar</a></p>
-            </div>
-
-            <div class="col-sm-8 text-left"> 
-
             </div>
 
             <div class="col-sm-2 sidenav">

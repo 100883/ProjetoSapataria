@@ -37,6 +37,7 @@
                         <li><a href="cliente.jsp">Cliente</a></li>
                         <li><a href="fornecedor.jsp">Fronecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
+                        <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
