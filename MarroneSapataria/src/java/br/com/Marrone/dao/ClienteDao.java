@@ -151,16 +151,15 @@ public class ClienteDao {
             prd.setInt(1, id);
             ResultSet rs = prd.executeQuery();
 
-            while (rs.next()) {
-                Cliente cli = new Cliente();
-                cli.setId(rs.getInt("id_cli"));
-                cli.setNome(rs.getString("nome_cli"));
-                cli.setCpf(rs.getString("cpf_cli"));
-                cli.setEndereco(rs.getString("endereco_cli"));
-                cli.setEmail(rs.getString("email_cli"));
-                cli.setCelular(rs.getString("celular_cli"));
-                cli.setSexo(rs.getString("sexo_cli"));
-                cli.setStatus(rs.getBoolean("status_cli"));
+            if (rs.next()) {
+                cliente.setId(rs.getInt("id_cli"));
+                cliente.setNome(rs.getString("nome_cli"));
+                cliente.setCpf(rs.getString("cpf_cli"));
+                cliente.setEndereco(rs.getString("endereco_cli"));
+                cliente.setEmail(rs.getString("email_cli"));
+                cliente.setCelular(rs.getString("celular_cli"));
+                cliente.setSexo(rs.getString("sexo_cli"));
+                cliente.setStatus(rs.getBoolean("status_cli"));
             }
 
         } catch (SQLException erro) {

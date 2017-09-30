@@ -10,9 +10,10 @@
 <!DOCTYPE html>
 <html lang="en">
     <head>
-        <title>Bootstrap Example</title>
+        <title>Cadastro de Cliente</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="icon" type="image/jpg" href="image/icon.jpg">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -34,7 +35,7 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.jsp">Home</a></li>
-                        <li><a href="clienteWeb.jsp">Cliente</a></li>
+                        <li><a href="cliente.jsp">Cliente</a></li>
                         <li><a href="fornecedor.jsp">Fronecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
                         <li><a href="relatorios.jsp">Relatórios</a></li>
@@ -87,10 +88,6 @@
                                value="TRUE"/> Ativo
                         <input type="radio" name="status" required
                                value="FALSE"/> Inativo<br><br>
-
-                        Data Cadastro<br>
-                        <input type="text"  name="dataCad" class="campo" required
-                               value = "<c:out value="${cli.dataCad}"/>" /> <br />
 
                 </div>
 
