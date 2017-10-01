@@ -10,7 +10,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en">
     <head>
-        <title>Consulta de Fornecedores</title>
+        <title>Consulta de Produtos</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/jpg" href="image/icon.jpg">
@@ -50,49 +50,45 @@
         <div class="row content">
             <div class="col-sm-2 sidenav">                
                 <li><a href="ClienteCTRL?action=listaCliente">Clientes</a></li>
-                <li><a href="#">Fornecedores</a></li>
-                <li><a href="ProdutoCTRL?action=listaProduto">Produtos</a></li>
+                <li><a href="FornecedorCTRL?action=listaFornecedor">Fornecedores</a></li>
+                <li><a href="#">Produtos</a></li>
             </div>
 
             <div class="col-sm-8 text-left"> 
-                <h1>Consulta de Fornecedores</h1>
+                <h1>Consulta de Clientes</h1>
                 <hr><br><br>
                 <table border=1>
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Razão Social</th>
-                            <th>CNPJ</th>
-                            <th>Endereço</th>
-                            <th>Telefone</th>
-                            <th>Celular</th>
-                            <th>Email</th>
-                            <th>Contato</th>
-                            <th>Tipo de Produto</th>
+                            <th>Descrição do Produto</th>
+                            <th>Tipo</th>
+                            <th>Tamanho</th>
+                            <th>Marca</th>
+                            <th>Fabricante</th>
+                            <th>Vida Útil</th>
                             
                             <th colspan=2>Opção</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${fornecedores}" var="forn">
+                        <c:forEach items="${produtos}" var="prod">
                             <tr>
-                                <td><c:out value="${forn.id}" /></td>
-                                <td><c:out value="${forn.razaoSocial}" /></td>
-                                <td><c:out value="${forn.cnpj}" /></td>
-                                <td><c:out value="${forn.endereco}" /></td>
-                                <td><c:out value="${forn.telefone}" /></td>
-                                <td><c:out value="${forn.celular}" /></td>
-                                <td><c:out value="${forn.email}" /></td>
-                                <td><c:out value="${forn.contato}" /></td>
-                                <td><c:out value="${forn.tipoProd}" /></td>
+                                <td><c:out value="${prod.id}" /></td>
+                                <td><c:out value="${prod.desc}" /></td>
+                                <td><c:out value="${prod.tipo}" /></td>
+                                <td><c:out value="${prod.tamanho}" /></td>
+                                <td><c:out value="${prod.marca}" /></td>
+                                <td><c:out value="${prod.fabricante}" /></td>
+                                <td><c:out value="${prod.vidaUtil}" /></td>
 
-                                <td><a href="FornecedorCTRL?action=alterar&id=<c:out value="${forn.id}"/>">Alterar</a></td>
-                                <td><a href="FornecedorCTRL?action=deletar&id=<c:out value="${forn.id}"/>">Deletar</a></td>
+                                <td><a href="ProdutoCTRL?action=alterar&id=<c:out value="${prod.id}"/>">Alterar</a></td>
+                                <td><a href="ProdutoCTRL?action=deletar&id=<c:out value="${prod.id}"/>">Deletar</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="FornecedorCTRL?action=adicionar">Adicionar</a></p>
+                <p><a href="ProdutoCTRL?action=adicionar">Adicionar</a></p>
             </div>
 
             <div class="col-sm-2 sidenav">

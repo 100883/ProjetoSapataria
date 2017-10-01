@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -52,7 +53,7 @@ public class ProdutoDao {
         }
     }
 
-    public void Excluir(int id) throws Exception{
+    public void Excluir(int id){
         try {
             String sql = "DELETE FROM produto WHERE id_prod = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);
@@ -67,8 +68,8 @@ public class ProdutoDao {
 
     public void Alterar(Produto produto) {
         try {
-            String sql = "UPDATE produto SET"
-                    + "desc_prod = ?, "
+            String sql = "UPDATE produto SET "
+                    + " desc_prod = ?, "
                     + "tipo_prod = ?, "
                     + "tamanho_prod = ?, "
                     + "marca_prod = ?, "
@@ -82,7 +83,7 @@ public class ProdutoDao {
             prd.setString(4, produto.getMarca());
             prd.setString(5, produto.getFabricante());
             prd.setString(6, produto.getVidaUtil());
-            prd.setInt(8, produto.getId());
+            prd.setInt(7, produto.getId());
 
             prd.executeUpdate();
 
@@ -94,26 +95,29 @@ public class ProdutoDao {
     public List<Produto> Listar(String nome) {
         List<Produto> produto = new ArrayList<Produto>();
         try {
+//            String sql = "SELECT * "
+//                    + "FROM produto "
+//                    + "WHERE 1=1 ";
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    sql += " and desc_prod like ? ";
+//                }
+//            }
+//
+//            sql += "ORDER BY desc_prod";
+//
+//            PreparedStatement prd = conexao.prepareStatement(sql);
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    prd.setString(1, "%" + nome + "%");
+//                }
+//            }
             String sql = "SELECT * "
                     + "FROM produto "
                     + "WHERE 1=1 ";
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    sql += " and desc_prod like ? ";
-                }
-            }
-
-            sql += "ORDER BY desc_prod";
-
-            PreparedStatement prd = conexao.prepareStatement(sql);
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    prd.setString(1, "%" + nome + "%");
-                }
-            }
-
+            Statement prd = conexao.createStatement();
             ResultSet rs = prd.executeQuery(sql);
 
             while (rs.next()) {
@@ -133,24 +137,22 @@ public class ProdutoDao {
         return produto;
     }
 
-    public List<Produto> ListarPorId(int id) {
-        List<Produto> produto = new ArrayList<Produto>();
+    public Produto ListarPorId(int id) {
+        Produto produto = new Produto();
         try {
             String sql = "SELECT * FROM produto WHERE id_prod = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);
             prd.setInt(1, id);
             ResultSet rs = prd.executeQuery();
 
-            while (rs.next()) {
-                Produto prod = new Produto();
-                prod.setId(rs.getInt("id_prod"));
-                prod.setDescProd(rs.getString("desc_prod"));
-                prod.setTipoProd(rs.getString("tipo_prod"));
-                prod.setTamanho(rs.getInt("tamanho_prod"));
-                prod.setMarca(rs.getString("marca_prod"));
-                prod.setFabricante(rs.getString("fabricante_prod"));
-                prod.setVidaUtil(rs.getString("vidautil_prod"));
-                produto.add(prod);
+            if (rs.next()) {
+                produto.setId(rs.getInt("id_prod"));
+                produto.setDescProd(rs.getString("desc_prod"));
+                produto.setTipoProd(rs.getString("tipo_prod"));
+                produto.setTamanho(rs.getInt("tamanho_prod"));
+                produto.setMarca(rs.getString("marca_prod"));
+                produto.setFabricante(rs.getString("fabricante_prod"));
+                produto.setVidaUtil(rs.getString("vidautil_prod"));
             }
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, erro);

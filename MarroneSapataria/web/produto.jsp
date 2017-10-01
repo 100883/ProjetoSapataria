@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.jsp">Home</a></li>
                         <li><a href="cliente.jsp">Cliente</a></li>
-                        <li><a href="fornecedor.jsp">Fronecedor</a></li>
+                        <li><a href="fornecedor.jsp">Fornecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
                         <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
@@ -54,18 +54,50 @@
                 </div>
 
                 <div class="col-sm-8 text-left"> 
-                    Produto
-                </div>
+                    <form method="post" action="ProdutoCTRL" name="frmAdicionaProduto" id="prdform">
+                        <input type="submit" value="Salvar" class="btn">
+                        <input type="reset" value="Limpar" class="btn">
+                        <br><br>
 
-                <div class="col-sm-2 sidenav">
+                        Id<br>
+                        <input type="text" readonly="readonly" name="id" class="id"
+                               value="<c:out value="${prod.id}"/>"/><br><br>                    
+                        Descrição<br>
+                        <textarea rows="4" cols="50" name="desc" form="prdform" maxlength="500" required autofocus                                  
+                                  value = "<c:out value="${prod.desc}"/>"/>
+                        </textarea><br><br>
+                        Tipo de Produto<br><br>
+                        <input type="radio" name="tipo" required
+                               value="sapato"/> Sapato
+                        <input type="radio" name="tipo" required
+                               value="tenis"/> Tênis
+                        <input type="radio" name="tipo" required
+                               value="coturno"/> Coturno
+                        <input type="radio" name="tipo" required
+                               value="sandalia"/> Sandália<br><br>
+                        Tamanho<br>
+                        <input type="text" name="tamanho" class="campo" maxlength="2" required
+                               value = "<c:out value="${prod.tamanho}"/>"/><br>
+                        Marca<br>
+                        <input type="text" name="marca" class="campo" maxlength="20" required
+                               value = "<c:out value="${prod.marca}"/>"/><br>
+                        Fabricante<br>
+                        <input type="text" name="fabricante" class="campo" maxlength="20" required
+                               value = "<c:out value="${prod.fabricante}"/>"/><br>
+                        Vida Útil<br>
+                        <input type="text" name="vidaUtil" class="campo" maxlength="10" required
+                               value = "<c:out value="${prod.vidaUtil}"/>"/><br>
+                        </div>
 
+                        <div class="col-sm-2 sidenav">
+
+                        </div>
                 </div>
             </div>
-        </div>
 
-        <footer class="container-fluid text-center">
-            <p></p>
-        </footer>
+            <footer class="container-fluid text-center">
+                <p></p>
+            </footer>
 
     </body>
 </html>

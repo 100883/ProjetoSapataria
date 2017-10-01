@@ -34,7 +34,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
                             <li><a href="cliente.jsp">Cliente</a></li>
-                            <li><a href="fornecedor.jsp">Fronecedor</a></li>
+                            <li><a href="fornecedor.jsp">Fornecedor</a></li>
                             <li><a href="produto.jsp">Produto</a></li>
                             <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>

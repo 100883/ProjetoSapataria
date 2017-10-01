@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.jsp">Home</a></li>
                         <li><a href="cliente.jsp">Cliente</a></li>
-                        <li><a href="fornecedor.jsp">Fronecedor</a></li>
+                        <li><a href="fornecedor.jsp">Fornecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
                         <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
@@ -83,7 +83,7 @@
                         Contato<br>
                         <input type="text" name="contato" class="campo" maxlength="50" required
                                value = "<c:out value="${forn.contato}"/>"/><br>
-                        Tipo de Produto Fornecido<br>
+                        Tipo de Produto Fornecido<br><br>
                         <input type="radio" name="tipoprod" required
                                value="sapato"/> Sapato
                         <input type="radio" name="tipoprod" required

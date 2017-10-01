@@ -36,7 +36,7 @@
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="index.jsp">Home</a></li>
                         <li><a href="cliente.jsp">Cliente</a></li>
-                        <li><a href="fornecedor.jsp">Fronecedor</a></li>
+                        <li><a href="fornecedor.jsp">Fornecedor</a></li>
                         <li><a href="produto.jsp">Produto</a></li>
                         <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
@@ -77,13 +77,12 @@
                         Celular<br>
                         <input type="text" name="celular" class="campo" maxlength="16" required
                                value = "<c:out value="${cli.celular}"/>"/><br>
-                        Sexo<br>
+                        Sexo<br><br>
                         <input type="radio" name="sexo" required
                                value= "M"/> Masculino
                         <input type="radio" name="sexo" required
                                value= "F"/> Feminino<br><br>
-
-                        Status<br>
+                        Status<br><br>
                         <input type="radio" name="status" required
                                value="TRUE"/> Ativo
                         <input type="radio" name="status" required
