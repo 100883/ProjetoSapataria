@@ -32,7 +32,7 @@
                 </div>
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
-                        <li class="active"><a href="#">Home</a></li>
+                        <li class="active"><a href="index.jsp">Home</a></li>
                             <li><a href="cliente.jsp">Cliente</a></li>
                             <li><a href="fornecedor.jsp">Fronecedor</a></li>
                             <li><a href="produto.jsp">Produto</a></li>
@@ -49,7 +49,7 @@
             <div class="row content">
                 <div class="col-sm-2 sidenav">
                    <li><a href="ClienteCTRL?action=listaCliente">Clientes</a></li>
-                   <li><a href="#">Fornecedores</a></li>
+                   <li><a href="FornecedorCTRL?action=listaFornecedor">Fornecedores</a></li>
                    <li><a href="#">Produtos</a></li>
                 </div>
                 

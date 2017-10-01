@@ -54,7 +54,45 @@
                 </div>
 
                 <div class="col-sm-8 text-left"> 
-                    Fornecedor
+                    <form method="post" action="FornecedorCTRL" name="frmAdicionaFornecedor">
+                        <input type="submit" value="Salvar" class="btn">
+                        <input type="reset" value="Limpar" class="btn">
+                        <br><br>
+
+                        Id<br>
+                        <input type="text" readonly="readonly" name="id" class="id"
+                               value="<c:out value="${forn.id}"/>"/><br><br>                    
+                        Razão Social<br>
+                        <input type="text" name="razao" class="campo" maxlength="100" required autofocus 
+                               value = "<c:out value="${forn.razaoSocial}"/>"/><br>
+                        CNPJ<br>
+                        <input type="text" name="cnpj" class="campo" maxlength="11" required
+                               value = "<c:out value="${forn.cnpj}"/>"/><br>
+                        Endereço<br>
+                        <input type="text" name="endereco" class="campo" maxlength="200" required
+                               value = "<c:out value="${forn.endereco}"/>"/><br>
+                        Telefone<br>
+                        <input type="text" name="telefone" class="campo" maxlength="50" required
+                               value = "<c:out value="${forn.telefone}"/>"/><br>
+                        Celular<br>
+                        <input type="text" name="celular" class="campo" maxlength="16" required
+                               value = "<c:out value="${forn.celular}"/>"/><br>
+                        Email<br>
+                        <input type="email" name="email" class="campo" maxlength="50" required
+                               value = "<c:out value="${forn.email}"/>"/><br>
+                        Contato<br>
+                        <input type="text" name="contato" class="campo" maxlength="50" required
+                               value = "<c:out value="${forn.contato}"/>"/><br>
+                        Tipo de Produto Fornecido<br>
+                        <input type="radio" name="tipoprod" required
+                               value="sapato"/> Sapato
+                        <input type="radio" name="tipoprod" required
+                               value="tenis"/> Tênis
+                        <input type="radio" name="tipoprod" required
+                               value="coturno"/> Coturno
+                        <input type="radio" name="tipoprod" required
+                               value="sandalia"/> Sandália<br><br>
+
                 </div>
 
                 <div class="col-sm-2 sidenav">

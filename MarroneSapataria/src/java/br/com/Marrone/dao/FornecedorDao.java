@@ -11,6 +11,7 @@ import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 import java.util.List;
 import javax.swing.JOptionPane;
@@ -81,7 +82,7 @@ public class FornecedorDao {
                     + "email_forn = ?, "
                     + "contato_forn = ?, "
                     + "tipoprod_forn = ? "
-                    + " WHERE id_cli = ?";
+                    + " WHERE id_forn = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);
             prd.setString(1, fornecedor.getCnpj());
             prd.setString(2, fornecedor.getRazaoSocial());
@@ -103,26 +104,29 @@ public class FornecedorDao {
     public List<Fornecedor> Listar(String nome) {
         List<Fornecedor> fornecedor = new ArrayList<Fornecedor>();
         try {
+//            String sql = "SELECT * "
+//                    + "FROM fornecedor "
+//                    + "WHERE 1=1 ";
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    sql += " and razaosocial_forn like ? ";
+//                }
+//            }
+//
+//            sql += "ORDER BY razaosocial_forn";
+//
+//            PreparedStatement prd = conexao.prepareStatement(sql);
+//
+//            if (nome != null) {
+//                if (!nome.isEmpty()) {
+//                    prd.setString(1, "%" + nome + "%");
+//                }
+//            }
             String sql = "SELECT * "
                     + "FROM fornecedor "
                     + "WHERE 1=1 ";
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    sql += " and razaosocial_forn like ? ";
-                }
-            }
-
-            sql += "ORDER BY razaosocial_forn";
-
-            PreparedStatement prd = conexao.prepareStatement(sql);
-
-            if (nome != null) {
-                if (!nome.isEmpty()) {
-                    prd.setString(1, "%" + nome + "%");
-                }
-            }
-
+            Statement prd = conexao.createStatement();
             ResultSet rs = prd.executeQuery(sql);
 
             while (rs.next()) {
@@ -145,25 +149,24 @@ public class FornecedorDao {
         return fornecedor;
     }
 
-    public List<Fornecedor> ListarPorId(int id) {
-        List<Fornecedor> fornecedor = new ArrayList<Fornecedor>();
+    public Fornecedor ListarPorId(int id) {
+        Fornecedor fornecedor = new Fornecedor();
         try {
             String sql = "SELECT * FROM fornecedor WHERE id_forn = ?";
             PreparedStatement prd = conexao.prepareStatement(sql);
             prd.setInt(1, id);
             ResultSet rs = prd.executeQuery();
 
-            while (rs.next()) {
-                Fornecedor forn = new Fornecedor();
-                forn.setId(rs.getInt("id_forn"));
-                forn.setCnpj(rs.getString("cnpj_forn"));
-                forn.setRazaoSocial(rs.getString("razaosocial_forn"));
-                forn.setEndereco(rs.getString("endereco_forn"));
-                forn.setTelefone(rs.getString("telefone_forn"));
-                forn.setCelular(rs.getString("celular_forn"));
-                forn.setEmail(rs.getString("email_forn"));
-                forn.setContato(rs.getString("contato_forn"));
-                forn.setTipoProd(rs.getString("tipoprod_forn"));
+            if (rs.next()) {                
+                fornecedor.setId(rs.getInt("id_forn"));
+                fornecedor.setCnpj(rs.getString("cnpj_forn"));
+                fornecedor.setRazaoSocial(rs.getString("razaosocial_forn"));
+                fornecedor.setEndereco(rs.getString("endereco_forn"));
+                fornecedor.setTelefone(rs.getString("telefone_forn"));
+                fornecedor.setCelular(rs.getString("celular_forn"));
+                fornecedor.setEmail(rs.getString("email_forn"));
+                fornecedor.setContato(rs.getString("contato_forn"));
+                fornecedor.setTipoProd(rs.getString("tipoprod_forn"));
             }
         } catch (SQLException erro) {
             JOptionPane.showMessageDialog(null, erro);

@@ -10,7 +10,7 @@
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt"%>
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd"><html lang="en">
     <head>
-        <title>Consulta de Clientes</title>
+        <title>Consulta de Fornecedores</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/jpg" href="image/icon.jpg">
@@ -49,46 +49,50 @@
     <div class="container-fluid text-center">    
         <div class="row content">
             <div class="col-sm-2 sidenav">                
-                <li><a href="#">Clientes</a></li>
-                <li><a href="FornecedorCTRL?action=listaFornecedor">Fornecedores</a></li>
+                <li><a href="ClienteCTRL?action=listaCliente">Clientes</a></li>
+                <li><a href="#">Fornecedores</a></li>
                 <li><a href="listaProduto.jsp">Produtos</a></li>
             </div>
 
             <div class="col-sm-8 text-left"> 
-                <h1>Consulta de Clientes</h1>
+                <h1>Consulta de Fornecedores</h1>
                 <hr><br><br>
                 <table border=1>
                     <thead>
                         <tr>
                             <th>Id</th>
-                            <th>Nome Completo</th>
-                            <th>CPF</th>
-                            <th>Email</th>
+                            <th>Razão Social</th>
+                            <th>CNPJ</th>
+                            <th>Endereço</th>
+                            <th>Telefone</th>
                             <th>Celular</th>
-                            <th>Sexo</th>
-                            <th>Status</th>
+                            <th>Email</th>
+                            <th>Contato</th>
+                            <th>Tipo de Produto</th>
                             
                             <th colspan=2>Opção</th>
                         </tr>
                     </thead>
                     <tbody>
-                        <c:forEach items="${clientes}" var="cli">
+                        <c:forEach items="${fornecedores}" var="forn">
                             <tr>
-                                <td><c:out value="${cli.id}" /></td>
-                                <td><c:out value="${cli.nome}" /></td>
-                                <td><c:out value="${cli.cpf}" /></td>
-                                <td><c:out value="${cli.email}" /></td>
-                                <td><c:out value="${cli.celular}" /></td>
-                                <td><c:out value="${cli.sexo}" /></td>
-                                <td><c:out value="${cli.status}" /></td>
+                                <td><c:out value="${forn.id}" /></td>
+                                <td><c:out value="${forn.razaoSocial}" /></td>
+                                <td><c:out value="${forn.cnpj}" /></td>
+                                <td><c:out value="${forn.endereco}" /></td>
+                                <td><c:out value="${forn.telefone}" /></td>
+                                <td><c:out value="${forn.celular}" /></td>
+                                <td><c:out value="${forn.email}" /></td>
+                                <td><c:out value="${forn.contato}" /></td>
+                                <td><c:out value="${forn.tipoProd}" /></td>
 
-                                <td><a href="ClienteCTRL?action=alterar&id=<c:out value="${cli.id}"/>">Alterar</a></td>
-                                <td><a href="ClienteCTRL?action=deletar&id=<c:out value="${cli.id}"/>">Deletar</a></td>
+                                <td><a href="FornecedorCTRL?action=alterar&id=<c:out value="${forn.id}"/>">Alterar</a></td>
+                                <td><a href="FornecedorCTRL?action=deletar&id=<c:out value="${forn.id}"/>">Deletar</a></td>
                             </tr>
                         </c:forEach>
                     </tbody>
                 </table>
-                <p><a href="ClienteCTRL?action=adicionar">Adicionar</a></p>
+                <p><a href="FornecedorCTRL?action=adicionar">Adicionar</a></p>
             </div>
 
             <div class="col-sm-2 sidenav">
