@@ -13,7 +13,7 @@
         <title>Consulta de Fornecedores</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="icon" type="image/jpg" href="image/icon.jpg">
+        <link rel="icon" type="image/png" href="image/fornecedor.png">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
