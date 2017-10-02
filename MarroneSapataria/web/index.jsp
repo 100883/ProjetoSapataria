@@ -48,11 +48,26 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-                   
+                        <section class="logo">
+                        <figure>
+                            <img src="image/icon.jpg" alt="logo" title="Nossa logo">
+                            <figcaption>
+                                <h1>Marrone's Sapataria</h1>
+                                <br>
+                                Começando agora há atuar no mercado, disponibilizamos nossos serviços com eficiência e eficácia.
+                            </figcaption>
+                        </figure>
+                    </section>
                 </div>
                 
                 <div class="col-sm-8 text-left"> 
-
+                    <section class="fundo">                         
+                        <div class="banner">
+                            <h2>Seja bem vindo!</h2>
+                        </div>
+                        
+                    </section>
+                    
                 </div>
                 
                 <div class="col-sm-2 sidenav">

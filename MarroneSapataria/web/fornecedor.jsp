@@ -50,7 +50,7 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-
+                    <img src="image/fornecedor.png" alt="Fornecedor" title="Fornecedor">
                 </div>
 
                 <div class="col-sm-8 text-left"> 
@@ -93,17 +93,17 @@
                         <input type="radio" name="tipoprod" required
                                value="sandalia"/> Sandália<br><br>
 
-                </div>
+                        </div>
 
-                <div class="col-sm-2 sidenav">
+                        <div class="col-sm-2 sidenav">
 
+                        </div>
                 </div>
             </div>
-        </div>
 
-        <footer class="container-fluid text-center">
-            <p></p>
-        </footer>
+            <footer class="container-fluid text-center">
+                <p></p>
+            </footer>
 
     </body>
 </html>

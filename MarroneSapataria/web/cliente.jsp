@@ -50,7 +50,7 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-
+                    <img src="image/cliente.png" alt="Cliente" title="Cliente">
                 </div>
 
                 <div class="col-sm-8 text-left"> 
@@ -79,7 +79,7 @@
                                value = "<c:out value="${cli.celular}"/>"/><br>
                         Sexo<br><br>
                         <input type="radio" name="sexo" required
-                               value= "M"/> Masculino
+                               value= "M"/> Masculino   
                         <input type="radio" name="sexo" required
                                value= "F"/> Feminino<br><br>
                         Status<br><br>
