@@ -79,26 +79,26 @@
                                value = "<c:out value="${cli.celular}"/>"/><br>
                         Sexo<br><br>
                         <input type="radio" name="sexo" required
-                               value= "M"/> Masculino   
+                               value= "M" ${cli.sexo == valorSexo ? 'checked':''}/> Masculino   
                         <input type="radio" name="sexo" required
-                               value= "F"/> Feminino<br><br>
+                               value= "F" ${cli.sexo != valorSexo ? 'checked':''}/> Feminino<br><br>
                         Status<br><br>
                         <input type="radio" name="status" required
-                               value="TRUE"/> Ativo
+                               value="true" ${cli.status == valorStatus ? 'checked':''}/> Ativo
                         <input type="radio" name="status" required
-                               value="FALSE"/> Inativo<br><br>
+                               value="false" ${cli.status != valorStatus ? 'checked':''}/> Inativo<br><br>
 
-                </div>
+                        </div>
 
-                <div class="col-sm-2 sidenav">
+                        <div class="col-sm-2 sidenav">
 
+                        </div>
                 </div>
             </div>
-        </div>
 
-        <footer class="container-fluid text-center">
-            <p></p>
-        </footer>
+            <footer class="container-fluid text-center">
+                <p></p>
+            </footer>
 
     </body>
 </html>

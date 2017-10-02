@@ -84,15 +84,15 @@
                         <input type="text" name="contato" class="campo" maxlength="50" required
                                value = "<c:out value="${forn.contato}"/>"/><br>
                         Tipo de Produto Fornecido<br><br>
-                        <input type="radio" name="tipoprod" required
-                               value="sapato"/> Sapato
-                        <input type="radio" name="tipoprod" required
-                               value="tenis"/> Tênis
-                        <input type="radio" name="tipoprod" required
-                               value="coturno"/> Coturno
-                        <input type="radio" name="tipoprod" required
-                               value="sandalia"/> Sandália<br><br>
-
+                        <select>
+                            <option value=""></option>
+                            <option value="<c:out value="${forn.tipoProd}"/>">Sapato</option>
+                            <option value="<c:out value="${forn.tipoProd}"/>">Tênis</option>
+                            <option value="<c:out value="${forn.tipoProd}"/>">Coturno</option>
+                            <option value="<c:out value="${forn.tipoProd}"/>">Sandália</option>
+                            <br><br>
+                        </select>
+                        
                         </div>
 
                         <div class="col-sm-2 sidenav">

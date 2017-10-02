@@ -67,7 +67,7 @@
                             <th>Marca</th>
                             <th>Fabricante</th>
                             <th>Vida Útil</th>
-                            
+
                             <th colspan=2>Opção</th>
                         </tr>
                     </thead>

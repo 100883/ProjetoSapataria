@@ -88,7 +88,8 @@ public class ClienteCTRL extends HttpServlet {
         } else {
             forward = INSERT_OR_EDIT;
         }
-
+        request.setAttribute("valorSexo", "M");
+        request.setAttribute("valorStatus", "true");
         RequestDispatcher view = request.getRequestDispatcher(forward);
         view.forward(request, response);
     }
@@ -123,6 +124,8 @@ public class ClienteCTRL extends HttpServlet {
             dao.Alterar(cli);
         }
         RequestDispatcher view = request.getRequestDispatcher(LISTA_CLIENTE);
+        request.setAttribute("valorSexo", "M");
+        request.setAttribute("valorStatus", "true");
         request.setAttribute("clientes", dao.Listar(LISTA_CLIENTE));
         view.forward(request, response);
     }
