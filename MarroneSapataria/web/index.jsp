@@ -11,12 +11,14 @@
         <title>Marrone's Sapataria</title>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="icon" type="image/jpg" href="image/icon1.jpg">
         <link rel="stylesheet" href="css/estilo.css">
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-        
+
     </head>
     <body>
 
@@ -33,10 +35,10 @@
                 <div class="collapse navbar-collapse" id="myNavbar">
                     <ul class="nav navbar-nav">
                         <li class="active"><a href="#">Home</a></li>
-                            <li><a href="cliente.jsp">Cliente</a></li>
-                            <li><a href="fornecedor.jsp">Fornecedor</a></li>
-                            <li><a href="produto.jsp">Produto</a></li>
-                            <li><a href="relatorios.jsp">Relatórios</a></li>
+                        <li><a href="cliente.jsp">Cliente</a></li>
+                        <li><a href="fornecedor.jsp">Fornecedor</a></li>
+                        <li><a href="produto.jsp">Produto</a></li>
+                        <li><a href="relatorios.jsp">Relatórios</a></li>
                     </ul>
                     <ul class="nav navbar-nav navbar-right">
                         <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
@@ -48,7 +50,7 @@
         <div class="container-fluid text-center">    
             <div class="row content">
                 <div class="col-sm-2 sidenav">
-                        <section class="logo">
+                    <section class="logo">
                         <figure>
                             <img src="image/icon.jpg" alt="logo" title="Nossa logo">
                             <figcaption>
@@ -59,18 +61,25 @@
                         </figure>
                     </section>
                 </div>
-                
+
                 <div class="col-sm-8 text-left"> 
                     <section class="fundo">                         
                         <div class="banner">
                             <h2>Seja bem vindo!</h2>
                         </div>
-                        
+
                     </section>
-                    
+
                 </div>
-                
+
                 <div class="col-sm-2 sidenav">
+                    <h3>Sigam nossas redes sociais</h3>
+                    
+                    <a href="https://www.facebook.com/profile.php?id=100022302857010" style="font-size:25px;" class="fa fa-facebook"></a><p>
+                    <a href="https://twitter.com/signup?lang=pt" style="font-size:25px;" class="fa fa-twitter"></a><p>
+                    <a href="https://www.youtube.com/watch?v=87SaRrpB3B4" style="font-size:25px;" class="fa fa-youtube"></a><p>
+                    <a href="https://www.instagram.com/?hl=pt-br" style="font-size:25px;" class="fa fa-instagram"></a><p>
+                    <a href="https://br.pinterest.com/" style="font-size:25px;" class="fa fa-pinterest"></a>
 
                 </div>
             </div>

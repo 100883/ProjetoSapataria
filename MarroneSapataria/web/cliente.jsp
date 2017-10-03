@@ -134,9 +134,9 @@
                 </div>
             </div>
 
-            <footer class="container-fluid text-center">
-                <p></p>
-            </footer>
-
     </body>
+
+    <footer class="container-fluid text-center">
+        <p></p>
+    </footer>
 </html>
