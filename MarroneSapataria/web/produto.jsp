@@ -63,9 +63,7 @@
                         <input type="text" readonly="readonly" name="id" class="id"
                                value="<c:out value="${prod.id}"/>"/><br><br>                    
                         Descrição<br>                        
-                        <textarea rows="4" cols="50" name="desc" form="prdform" maxlength="500" required autofocus/>
-                        <c:out value="${prod.desc}"/>
-                        </textarea><br><br>
+                        <textarea rows="4" cols="50" name="desc" form="prdform" maxlength="500" required autofocus/><c:out value="${prod.desc}"/></textarea><br><br>
                         Tipo de Produto<br><br>
                         <input type="radio" name="tipo" required
                                value="sapato"/> Sapato
