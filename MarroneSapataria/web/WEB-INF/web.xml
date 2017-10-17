@@ -12,6 +12,14 @@
         <servlet-name>ProdutoCTRL</servlet-name>
         <servlet-class>br.com.Marrone.ctrl.ProdutoCTRL</servlet-class>
     </servlet>
+    <servlet>
+        <servlet-name>PedidoCTRL</servlet-name>
+        <servlet-class>br.com.Marrone.ctrl.PedidoCTRL</servlet-class>
+    </servlet>
+    <servlet>
+        <servlet-name>PedidoItemCTRL</servlet-name>
+        <servlet-class>br.com.Marrone.ctrl.PedidoItemCTRL</servlet-class>
+    </servlet>
     <servlet-mapping>
         <servlet-name>ClienteCTRL</servlet-name>
         <url-pattern>/ClienteCTRL</url-pattern>
@@ -23,6 +31,14 @@
     <servlet-mapping>
         <servlet-name>ProdutoCTRL</servlet-name>
         <url-pattern>/ProdutoCTRL</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PedidoCTRL</servlet-name>
+        <url-pattern>/PedidoCTRL</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>PedidoItemCTRL</servlet-name>
+        <url-pattern>/PedidoItemCTRL</url-pattern>
     </servlet-mapping>
     <session-config>
         <session-timeout>
