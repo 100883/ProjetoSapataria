@@ -37,6 +37,8 @@
                     <li><a href="cliente.jsp">Cliente</a></li>
                     <li><a href="fornecedor.jsp">Fornecedor</a></li>
                     <li><a href="produto.jsp">Produto</a></li>
+                    <li><a href="PedidoCTRL?action=listaCliente">Pedido</a></li>
+                    <li><a href="PedidoItemCTRL?action=consultar">Pedido/ Produto</a></li>
                     <li><a href="relatorios.jsp">Relatórios</a></li>
                 </ul>
                 <ul class="nav navbar-nav navbar-right">

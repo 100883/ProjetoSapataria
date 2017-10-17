@@ -28,6 +28,7 @@ public class PedidoCTRL extends HttpServlet {
 
     private static final long serialVersionUID = 1L;
     private static String FORMULARIO = "/Pedido.jsp";
+    private static final String LISTA_CLIENTE = "/listaCliente.jsp";
     private ClienteDao cliDao;
     private PedidoDao pedDao;
 
@@ -74,6 +75,7 @@ public class PedidoCTRL extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
+        String forward = "";
         String action = request.getParameter("action");
 
         if (action.equalsIgnoreCase("remover")) {
@@ -85,6 +87,10 @@ public class PedidoCTRL extends HttpServlet {
             Pedido pedido = pedDao.ConsultarPorId(numero);
 
             request.setAttribute("pedido", pedido);
+            
+        } else if (action.equalsIgnoreCase("listaCliente")) {
+            forward = LISTA_CLIENTE;
+            request.setAttribute("clientes", cliDao.Listar(action));
         }
 
         RequestDispatcher view = request.getRequestDispatcher(FORMULARIO);
